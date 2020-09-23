@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
     offset: theme.mixins.toolbar,
     typo: {
+        color: '#7b93e8',
         fontFamily: "'Poppins', sans-serif",
         fontWeight: 700
     }
