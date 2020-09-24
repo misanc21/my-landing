@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, makeStyles} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core';
 const Footer = () => {
     const classes = useStyles();
     return ( 

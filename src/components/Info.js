@@ -1,28 +1,39 @@
 import React from 'react';
-import {makeStyles, Typography, Grid, Paper, Avatar} from '@material-ui/core';
+import { makeStyles, Typography, Grid, Paper, Avatar, Hidden } from '@material-ui/core';
 import imgAvatar from '../img/perfil.jpeg'
+import { OverPack } from 'rc-scroll-anim';
+
+import QueueAnim from 'rc-queue-anim';
 
 
 const Info = () => {
     const classes = useStyles();
-    return ( 
+    return (
         <div className={classes.root}>
             <Grid container spacing={3} >
                 <Grid item xs={12}>
-                <Paper className={classes.paper}>
-                    <Grid item className={classes.pothoCont}>
-                        <Avatar className={classes.avatar} src={imgAvatar}/>
-                    </Grid>
-                    <Grid item className={classes.personal}>
-                        <Typography variant="h2" className={classes.hello}>Misael Nivio Cortes</Typography>
-                        <Typography variant="h6" className={classes.who}>Computer systems engineer - Web developer</Typography>                    
-                        <Typography variant="h6" className={classes.who}>México, 23 years old</Typography>
-                        <Typography variant="h6" className={classes.litDesc}>I'm a Web developer with experience in React, Vue, Es6, Redux,  Node, Html5, CSS and more. Take a look to my public jobs</Typography>
-                    </Grid>
-                </Paper>
+                    <Paper className={classes.paper}>
+                        <OverPack style={{ overflow: 'hidden' }} >
+                            <QueueAnim key="queue">
+                                <Grid item key='a' className={classes.pothoCont}>
+                                    <Avatar className={classes.avatar} src={imgAvatar} />
+                                </Grid>
+                            </QueueAnim>
+                        </OverPack>
+                        <OverPack className={classes.appearence}>
+                            <Grid item className={classes.personal}>
+                                <QueueAnim key="queue">
+                                    <Typography key='a' variant="h2" className={classes.hello}>Misael Nivio Cortes</Typography>
+                                    <Typography key='b' variant="h6" className={classes.who}>Computer systems engineer - Web developer</Typography>
+                                    <Typography key='c' variant="h6" className={classes.who}>México, 23 years old</Typography>
+                                    <Typography key='d' variant="h6" className={classes.litDesc}>I'm a Web developer with experience in React, Vue, Es6, Redux,  Node, Html5, CSS and more. Take a look to my public jobs</Typography>
+                                </QueueAnim>
+                            </Grid>
+                        </OverPack>
+
+                    </Paper>
                 </Grid>
             </Grid>
-
         </div>
     );
 }
@@ -60,29 +71,38 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '.8rem'
         }
     },
-    personal:{
+    appearence:{
+        overflow: 'hidden',
+        width: '75%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            minHeight: '15rem',
+        }
+    },
+    personal: {
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     root: {
         flexGrow: 1,
-      },
-      paper: {
+    },
+    paper: {
+        minHeight: '16rem',
         padding: '3rem 1.4rem',
         textAlign: 'center',
         backgroundImage: 'url(/img/triangle-mosaic.png)',
-        borderRadius:'0',
+        borderRadius: '0',
         display: 'flex',
         justifyContent: 'space-between',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             justifyContent: 'center',
         }
-      },
-      pothoCont:{
+    },
+    pothoCont: {
         display: 'flex',
         justifyContent: 'center',
         minWidth: '400px',
@@ -91,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: '1rem'
         }
     },
-      avatar: {
+    avatar: {
         width: '250px',
         height: '250px',
         border: '10px solid #22ab1d',
@@ -100,8 +120,8 @@ const useStyles = makeStyles((theme) => ({
             width: '150px',
             height: '150px',
         }
-      },
-    
+    },
+
 }));
- 
+
 export default Info;
