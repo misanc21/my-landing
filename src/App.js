@@ -4,6 +4,8 @@ import Theme from './theme'
 
 import Header from './components/Header'
 import BackgroundTitle from './components/BackgroundTitle'
+import Info from './components/Info'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
     <ThemeProvider theme={Theme}>
       <Header/>
       <BackgroundTitle />
+      <Info />
+      <Footer />
     </ThemeProvider>
   );
 }

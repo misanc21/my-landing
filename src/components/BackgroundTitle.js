@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize:'cover',
-        position: 'absolute',
         maxWidth: '2000px',
         display: 'flex',
         alignItems: 'center',
