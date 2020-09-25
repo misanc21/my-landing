@@ -1,9 +1,9 @@
 import React from 'react';
 import Texty from 'rc-texty';
 
-import { makeStyles, Container, Button } from '@material-ui/core';
-import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { makeStyles, Container } from '@material-ui/core';
 
+import Iconos from './Iconos'
 
 const BackgroundTitle = () => {
     const classes = useStyles();
@@ -25,20 +25,7 @@ const BackgroundTitle = () => {
             >
                 Developer who loves JS
             </Texty>
-            <Container className={classes.containerIcons}>
-                <Button href="https://github.com/misanc21" target="_blank">
-                    <FaGithub className={classes.icons} size='1.3em' />
-                </Button>
-                <Button href="https://www.linkedin.com/in/misael-nivio-cortes-150034176/" target="_blank">
-                    <FaLinkedin className={classes.icons} size='1.3em' />
-                </Button>
-                <Button href="https://twitter.com/misanc21" target="_blank">
-                    <FaTwitter className={classes.icons} size='1.3em' />
-                </Button>
-                <Button href="https://api.whatsapp.com/send?phone=527713593993" target="_blank">
-                    <FaWhatsapp className={classes.icons} size='1.3em' />
-                </Button>
-            </Container>
+            <Iconos color="white"/>
         </Container>
     );
 }

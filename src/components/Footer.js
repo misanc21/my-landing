@@ -1,12 +1,16 @@
 import React from 'react';
-import {makeStyles, Grid, Paper} from '@material-ui/core';
+import {makeStyles, Grid, Paper, Typography} from '@material-ui/core';
+import Iconos from './Iconos'
 const Footer = () => {
     const classes = useStyles();
     return ( 
     <footer className={classes.back} spacing={3}>
-        <Grid container>
-            <Grid item>
-                <Paper className={classes.paper}> 
+        <Grid container className={classes.container}>
+            <Grid item sm={8}>
+                <Paper className={classes.paper}>
+                    <Typography variant="h6" className={classes.legend}>Follow me</Typography>
+                    <Iconos color="green"/>
+                    <Typography variant="body2" className={classes.powered}>Powered by Trisc</Typography>
                 </Paper>
             </Grid>
         </Grid>
@@ -18,21 +22,31 @@ const useStyles = makeStyles((theme) => ({
         flexGrow:1,
         marginTop:'2rem',
         backgroundColor: 'black',
-        minheight: '20rem',
-        maxWidth: '2000px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        [theme.breakpoints.down('sm')]: {
-            height: '23rem',
-        }
+        maxWidth: '2000px',
+    },
+    container: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     paper: {
         margin : '.5rem',
         padding: theme.spacing(1),
         textAlign: 'center',
-        color: theme.palette.text.secondary,
+        backgroundColor: 'black',
       },
+    legend : {
+        color: '#96d117',
+        fontWeight: 'bold'
+    },
+    powered : {
+        color: 'white',
+        fontWeight: '400',
+        marginTop: '1rem'
+    }
 
 }));
 export default Footer;

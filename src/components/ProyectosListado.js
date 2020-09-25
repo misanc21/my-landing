@@ -1,11 +1,10 @@
 import React from 'react';
 import { makeStyles, Typography, Grid, Paper } from '@material-ui/core';
-import { Autorenew } from '@material-ui/icons';
 const ProyectosListado = () => {
     const classes = useStyles();
     return ( 
         <div spacing={6}>
-            <Grid container spacing={6}>
+            <Grid container>
                 <Grid item className={classes.root} xs={12}>
                     <Paper className={classes.paper}>
                         <Typography className={classes.titulo} variant="subtitle2">My works</Typography>
