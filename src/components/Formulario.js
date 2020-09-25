@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles, TextField, Typography, Button } from '@material-ui/core';
 import { useForm } from 'react-hook-form'
+import clienteAxios from '../config/axios';
+import tokenAuth from '../config/tokenAuth'
 
 
 const Formulario = () => {
@@ -19,9 +21,17 @@ const Formulario = () => {
             [e.target.name]: e.target.value
         })
     }
-    const submitForm = () => {
-        console.log('submited')
-        setSended(true)
+    const submitForm = async () => {
+        const tk =  await clienteAxios.get('/api/reporte/token')
+        tokenAuth(tk.data.token)
+        await clienteAxios.post('/api/reporte/email', data)
+        .then(res=> {
+            console.log(res)
+            setSended(true)
+        })
+        .catch(error => {
+            console.log(error)
+        })
         setData({
             email: '',
             message: ''
