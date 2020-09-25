@@ -1,8 +1,7 @@
 import React from 'react';
-import { makeStyles, Typography, Grid, Paper, Avatar, Hidden } from '@material-ui/core';
+import { makeStyles, Typography, Grid, Paper, Avatar } from '@material-ui/core';
 import imgAvatar from '../img/perfil.jpeg'
 import { OverPack } from 'rc-scroll-anim';
-
 import QueueAnim from 'rc-queue-anim';
 
 

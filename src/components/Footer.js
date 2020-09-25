@@ -11,7 +11,7 @@ const Footer = () => {
 const useStyles = makeStyles((theme) => ({
     back: {
         backgroundColor: 'black',
-        height: '30rem',
+        height: '20rem',
         maxWidth: '2000px',
         display: 'flex',
         alignItems: 'center',
