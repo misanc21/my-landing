@@ -1,6 +1,6 @@
 import React from 'react';
 import Formulario from './Formulario'
-import { makeStyles, Typography, Grid, Paper } from '@material-ui/core';
+import { makeStyles, Grid, Paper } from '@material-ui/core';
 
 const Contactme = () => {
     const classes = useStyles();
