@@ -11,7 +11,7 @@ const ProyectosListado = () => {
                         <Typography className={classes.titulo} variant="subtitle2">My works</Typography>
                     </Paper>
                     <Paper className={classes.linea} />
-                    <Typography className={classes.desc} variant="subtitle2">take a look to my works, some of them are not available in a demo version.</Typography>
+                    <Typography className={classes.desc} variant="subtitle2">Take a look to my works, some of them are not available in a demo version.</Typography>
                 </Grid>
             </Grid>
         </div>

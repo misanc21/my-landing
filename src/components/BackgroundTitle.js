@@ -1,26 +1,42 @@
 import React from 'react';
-import {makeStyles, Container, Typography, Button} from '@material-ui/core';
+import Texty from 'rc-texty';
+
+import { makeStyles, Container, Button } from '@material-ui/core';
 import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 
 const BackgroundTitle = () => {
     const classes = useStyles();
-    return ( 
+
+    return (
         <Container className={classes.back}>
-            <Typography variant="h2" className={classes.hello}>Hi there, I'm Misa</Typography>
-            <Typography variant="body1" className={classes.stuff}>Developer who loves JS </Typography>
+            <Texty
+                className={classes.hello}
+                type="mask-top"
+                delay={200}
+            >
+                Hi there, I'm Misa!
+            </Texty>
+            <Texty
+                className={classes.stuff}
+                type="flash"
+                delay={1500}
+                interval={10}
+            >
+                Developer who loves JS
+            </Texty>
             <Container className={classes.containerIcons}>
                 <Button href="https://github.com/misanc21" target="_blank">
-                    <FaGithub className={classes.icons} size='1.3em'/>
+                    <FaGithub className={classes.icons} size='1.3em' />
                 </Button>
                 <Button href="https://www.linkedin.com/in/misael-nivio-cortes-150034176/" target="_blank">
-                    <FaLinkedin className={classes.icons} size='1.3em'/>
+                    <FaLinkedin className={classes.icons} size='1.3em' />
                 </Button>
                 <Button href="https://twitter.com/misanc21" target="_blank">
-                    <FaTwitter className={classes.icons} size='1.3em'/>
+                    <FaTwitter className={classes.icons} size='1.3em' />
                 </Button>
                 <Button href="https://api.whatsapp.com/send?phone=527713593993" target="_blank">
-                    <FaWhatsapp className={classes.icons} size='1.3em'/>
+                    <FaWhatsapp className={classes.icons} size='1.3em' />
                 </Button>
             </Container>
         </Container>
@@ -33,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         height: '30rem',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundSize:'cover',
+        backgroundSize: 'cover',
         maxWidth: '2000px',
         display: 'flex',
         alignItems: 'center',
@@ -44,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     hello: {
+        fontSize: '6rem',
         color: '#96d117',
         fontWeight: 700,
         borderBottom: '.2rem solid #5945a1',
@@ -76,5 +93,5 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '10px'
     }
 }));
- 
+
 export default BackgroundTitle;

@@ -9,7 +9,7 @@ const Header = () => {
             <AppBar position="fixed" color="primary">
                 <Toolbar>
                     <Typography variant="h6" className={classes.typo}>
-                        My Portfolio / misanc21
+                        Misanc21
                     </Typography>
                 </Toolbar>
             </AppBar>
