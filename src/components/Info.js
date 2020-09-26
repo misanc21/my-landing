@@ -99,6 +99,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             justifyContent: 'center',
+            minHeight: '26rem',
         }
     },
     pothoCont: {

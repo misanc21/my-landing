@@ -1,19 +1,17 @@
 import React from 'react';
 import { makeStyles, Typography, Grid, Paper } from '@material-ui/core';
 
-const ProyectosListado = () => {
-    const classes = useStyles();
-    return (
-        <Grid container>
-            <Grid item className={classes.root} xs={12}>
-                <Paper className={classes.paper}>
-                <Typography className={classes.titulo} variant="subtitle2">My works</Typography>
-                </Paper>
-                <Paper className={classes.linea} />
-                <Typography className={classes.desc} variant="subtitle2">Take a look to my works, some of them are not available in a demo version.</Typography>
-            </Grid>
+const Cargando = () => {
+    const classes = useStyles()
+    return ( 
+    <Grid container>
+        <Grid item className={classes.root} xs={12}>
+            <Paper className={classes.paper}>
+            <Typography className={classes.titulo} variant="subtitle2">Cargando...</Typography>
+            </Paper>
         </Grid>
-    );
+    </Grid>
+     );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:'center',
         textAlign: 'center',
         flexFlow: 'column wrap'
+    },
+    cont: {
+        minHeight: '20rem'
     },
     titulo: {
         color: '#541aa1',
@@ -58,4 +59,4 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
  
-export default ProyectosListado;
+export default Cargando;

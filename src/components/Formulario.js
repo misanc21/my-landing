@@ -83,11 +83,11 @@ const Formulario = () => {
                     />
                     {errors.message && <Typography variant="body1" className={classes.inputError}>{errors.message.message}</Typography>}
                     <Button variant="contained" type="submit" className={classes.button}>
-                        Send
+                        Submit
                     </Button>
                 </form>
                 :
-                <Typography variant="h6" className={classes.response}>I response you soon, thank you!</Typography>
+                <Typography variant="h6" className={classes.response}>I'll response you soon, thank you!</Typography>
             }
         </>
     );

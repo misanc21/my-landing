@@ -5,7 +5,7 @@ import Theme from './theme'
 import Header from './components/Header'
 import BackgroundTitle from './components/BackgroundTitle'
 import Info from './components/Info'
-import ProyectosListado from './components/ProyectosListado'
+import LazyListado from './components/LazyListado'
 import Contactme from './components/Contactme'
 import Footer from './components/Footer'
 
@@ -16,7 +16,7 @@ function App() {
       <Header/>
       <BackgroundTitle />
       <Info />
-      <ProyectosListado />
+      <LazyListado />
       <Contactme />
       <Footer />
     </ThemeProvider>
