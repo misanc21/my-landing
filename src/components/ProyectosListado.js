@@ -1,5 +1,8 @@
 import React from 'react';
 import { makeStyles, Typography, Grid, Paper } from '@material-ui/core';
+import Proyecto from './Proyecto'
+
+import {proyectos} from '../helper/arrayProyectos'
 
 const ProyectosListado = () => {
     const classes = useStyles();
@@ -12,6 +15,11 @@ const ProyectosListado = () => {
                 <Paper className={classes.linea} />
                 <Typography className={classes.desc} variant="subtitle2">Take a look to my works, some of them are not available in a demo version.</Typography>
             </Grid>
+            <Grid item className={classes.listado}>
+                {proyectos.map(p=>{
+                    return <Proyecto key={p.id} datos={p}/>
+                })} 
+            </Grid>
         </Grid>
     );
 }
@@ -23,6 +31,15 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:'center',
         textAlign: 'center',
         flexFlow: 'column wrap'
+    },
+    listado: {
+        width: '100%',
+        display: 'flex',
+        justifyContent:'space-evenly',
+        textAlign: 'center',
+        minHeight: '15rem',
+        margin: '3rem 0',
+        flexFlow: 'row wrap'
     },
     titulo: {
         color: '#541aa1',

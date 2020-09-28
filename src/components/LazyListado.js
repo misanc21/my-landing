@@ -8,13 +8,13 @@ const ProyectosListado = React.lazy(()=> import('./ProyectosListado'))
 const LazyListado = () => {
     const classes = useStyles()
     const { ref, inView } = useInView({ 
-        threshold: 0.5
+        rootMargin:'150px',
+        threshold: 0
       });
 
     return (
-        <Grid container spacing={6} ref={ref} className={classes.cont}>
+        <Grid container ref={ref} className={classes.cont}>
             <Suspense fallback={<Cargando/>}>
-                <p>efkjnekjnkjc djks   {inView.toString()}</p>
                 {inView? <ProyectosListado /> : <Cargando/> }
             </Suspense>
         </Grid>
