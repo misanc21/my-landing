@@ -6,7 +6,7 @@ export const proyectos = [
             descripcion: 'product hunt clone',
             link: 'https://producthunt-next-hzd16k68l.vercel.app/',
             madeWith:['Next', 'StyledComponents', 'Firebase'],
-            img: '../img/proyectos/mern-task.png',
+            img: '../img/proyectos/hunt.png',
             altImg: 'Mern'
         },
         {
