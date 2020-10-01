@@ -1,6 +1,15 @@
 
 export const proyectos = [
         {
+            id: 15,
+            nombre:'Covid Info',
+            descripcion: 'Context + useReducer, Covid info',
+            link: 'https://happy-brattain-357cb4.netlify.app/',
+            madeWith:['React', 'MaterialUI'],
+            img: '../img/proyectos/covid.png',
+            altImg: 'covid-19'
+        },
+        {
             id: 14,
             nombre:'Product hunt clone',
             descripcion: 'product hunt clone',
